@@ -398,22 +398,148 @@ After all has been done, residual risk is always present.
 
 #### Security frameworks and regulations
 
+| Framework              | Purpose                                                                 |
+|------------------------|-------------------------------------------------------------------------|
+| PCI DSS                | Industry self-regulation for promoting and standardizing processing of bank cards. |
+| ISO 27000 Series       | International standards for managing security.                          |
+| CIS Controls           | Recommended configurations and defenses to address common attacks.      |
+| NIST CSF               | US government standard for organizing security.                         |
+| DISA STIGs             | Extensive security guidelines from the US military.                     |
+| HIPAA                  | A US law that promotes protection of patient data.                      |
+| FedRAMP                | US government program that standardizes security assessment, authorization, and continuous monitoring for cloud services. |
+| Cloud Controls Matrix  | A cybersecurity control framework for cloud computing. It lists 16 domains and each domain is divided into control objectives. |
 
-#### PCI-DSS 
 
-#### ISO 27000 series 
+#### PCI-DSS (Payment Card Industry Data Security Standard)
+
+##### Mission
+> “The PCI Data Security Standard (PCI DSS) is a global standard that provides a baseline of technical and operational requirements designated to protect payment data.”
+
+- It is industry self-regulation.
+- The security of online transactions is its focus.
+- The requirements are an evolving and detailed listing of security measures deemed necessary to protect cardholder data.
+
+##### PCI DSS Goals
+1. Build and maintain a secure network and systems
+2. Protect cardholder data and promote security as a continuous process
+3. Maintain a vulnerability management program
+4. Implement strong access control measures
+5. Regularly monitor and test networks
+6. Maintain an information security policy
+
+*PCI DSS v4.0*  
+*PCI DSS: Payment Card Industry Security Standards*
+
+#### ISO 27000 Series
+
+##### An International Set of Standards
+- It consists of many standards ranging from privacy to management.
+- It acts as a guide in managing risks, cybersecurity defenses, and responding to threats.
+
+##### Information Security Management Systems (ISMS): ISO 27001
+- An ISMS is a cohesive set of security policies, processes, and roles.
+- It enumerates the implementation requirements for creating an ISMS.
+
 
 #### CIS Controls
 
-#### NIST Cybersecurity Framework
+##### Best Practices for Cyber Defenses
+- Organizes actions against the most prevalent cyberattacks
+- Peer reviewed and created by the IT community at-large
+- Addresses areas that may have special concerns or requirements:
+  - Cloud computing
+  - Mobile
+  - IoT
+  - Industrial Control Systems
+
+##### Provides Detailed Recommendations
+- Defines 18 critical security controls
+- Promotes its own Risk Assessment Method
+- CIS Controls are tailored to different types of organizations, called Implementation Groups
+
+
+#### NIST Cybersecurity Framework (NIST CSF)
+
+##### Primary Functions
+- Identify assets
+- Protect with appropriate safeguards
+- Detect violations and incidents
+- Respond to a detected event
+- Recover in a timely manner with resilience
+
+> Note: The NIST Cybersecurity Framework is different from the NIST Risk Management Framework (RMF), which is mandatory across the U.S. Federal Government. 
+
+| Identify | Protect | Detect | Respond | Recover |
+|--------|---------|--------|---------|---------|
+| Asset Management<br>Business Environment<br>Governance<br>Risk Assessment<br>Risk Management Strategy | Access Control<br>Awareness and Training<br>Data Security<br>Information Protection Processes and Procedures<br>Maintenance<br>Protective Technology | Anomalies and Events<br>Security Continuous Monitoring<br>Detection Processes | Response Planning<br>Communications<br>Analysis<br>Mitigation<br>Improvements | Recovery Planning<br>Improvements<br>Communications |
+
 
 #### DISA STIGs
 
+
+##### Defense Information Systems Agency publishes STIGs.
+
+- Security Technical Implementation Guides (STIGs)
+  - Hardware and software configurations
+  - Protocol settings and usage
+  - Training and operational security
+- STIGs are rated as:
+  - Category I (most critical)
+  - Category II
+  - Category III
+
+##### Platforms with Available STIGs
+- Windows
+- Linux
+- Apple
+- Cisco
+- Juniper
+
+
 #### HIPAA 
+
+##### Health Insurance Portability and Accountability Act of 1996
+- U.S. federal law establishing standards to safeguard Protected Health Information (PHI).
+- PHI cannot be disclosed without the patient’s consent or knowledge.
+- Applies to healthcare providers, payers, and clearinghouses, referred to as Covered Entities (CEs),
+  and others that support these CEs in handling PHI, referred to as Business Associates (BAs).
+- Addresses administrative, physical, and technical security.
+
+##### The HIPAA Security Rule
+- Ensure the confidentiality, integrity, and availability of all electronic PHI.
+- Detect and defend against anticipated threats to the security of information.
+- Prevent prohibited use or disclosure of PHI.
+- Third parties such as HITRUST certify compliance.
+
+> The NIST SP 800-66 document provides guidance on implementing HIPAA using the NIST CSF and security controls.
 
 #### Federal Risk and Authorization Management Program (FedRAMP)
 
+##### FedRAMP Regulates U.S. Government Cloud Use
+- Provides security assessment methods
+- Defines authorization procedures
+- Establishes procedures for certification and approval of cloud service providers
+
+##### Program Services and Information Are Provided To
+- Cloud service providers
+- Federal agencies
+- Security assessors
+
 #### Cloud Controls Matrix 
+
+##### This is a cybersecurity controls framework
+- It is a matrix of 17 or more domains related to all aspects of cloud computing.
+- Those domains are divided into over 190 control objectives.
+- It is especially useful for evaluating security controls to be implemented.
+
+##### The matrix is mapped to other cybersecurity frameworks
+- ISO/IEC 27001 / 27002 / 27017 / 27018
+- CIS Controls
+- PCI-DSS
+- NIST SP 800-53
+
+Cloud Security Alliance (CSA)
+
 
 ### Risk Management Framework steps
 
@@ -546,3 +672,5 @@ C. NIST Special Publications Group for FISMA Cloud Compliance
 D. Cloud Control Matrix - Federal Division
 
 ### Module Summary
+
+
