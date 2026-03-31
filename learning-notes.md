@@ -439,6 +439,14 @@ After all has been done, residual risk is always present.
 ##### Information Security Management Systems (ISMS): ISO 27001
 - An ISMS is a cohesive set of security policies, processes, and roles.
 - It enumerates the implementation requirements for creating an ISMS.
+- There are 7 key business processes must be performed:
+  - Context: Understand the organization and information security scope
+  - Leadership: Establish commitment, roles, and responsibilities
+  - Planning: Identify, assess, and treat information security risks
+  - Support: Provide resources, competence, awareness, communication, and documentation
+  - Operation: Implement and operate security controls and risk treatment plans
+  - Performance Evaluation: Monitor, measure, audit, and review ISMS performance
+  - Improvement – Address nonconformities and drive continual improvement
 
 
 #### CIS Controls
@@ -455,7 +463,14 @@ After all has been done, residual risk is always present.
 ##### Provides Detailed Recommendations
 - Defines 18 critical security controls
 - Promotes its own Risk Assessment Method
-- CIS Controls are tailored to different types of organizations, called Implementation Groups
+  - Modeling the risk
+  - Evaluating the risk
+  - Recommending the CIS safeguard
+  - Evaluating recommended CIS safeguard
+- CIS Controls are tailored to different types of organizations, called Implementation Groups (IG)
+  - IG1: Central Cyber Hygiene 
+  - IG2: relates to organizations with several departments with insignificant compliance requirements.
+  - IG3: is oriented towards organizations facing significant compliance and oversight, as well as enhanced requirements for protecting sensitive data. The safeguards that it specifies are designed to defend against attacks from sophisticated attackers.
 
 
 #### NIST Cybersecurity Framework (NIST CSF)
@@ -484,9 +499,9 @@ After all has been done, residual risk is always present.
   - Protocol settings and usage
   - Training and operational security
 - STIGs are rated as:
-  - Category I (most critical)
-  - Category II
-  - Category III
+  - Category I (most critical): must be assigned when there is the greatest risk of serious exploitation
+  - Category II: covers the area where there is significant risk of cybersecurity incidents
+  - Category III: pertains to systems that reduce overall security if left unaddressed
 
 ##### Platforms with Available STIGs
 - Windows
@@ -624,8 +639,6 @@ Implement processes that periodically or continuously assess:
 - Changes in the use or purpose of the asset
 
 
-
-
 ### Law Policies Frameworks Quiz
 
 #### Question 1
@@ -641,6 +654,7 @@ D. Decommissioning high-risk systems.
 
 #### Question 2
 Vị trí an ninh mạng nào phụ trách hoạt động an ninh hàng ngày?
+
 A. Nhà phân tích cấp cao thường được giao phụ trách các hoạt động hàng ngày.
 
 B. Giám đốc An toàn Thông tin có nhiệm vụ này.
@@ -651,6 +665,7 @@ C. Kỹ sư bảo mật giám sát hoạt động hàng ngày; Các nhà phân t
 
 #### Question 3
 What is a military guide that identifies need remediation?
+
 **A.** STIG: Security Technical Implementation Guide
 
 B. CVE Common Vulnerabilities and Exposures Entries with critical scores
@@ -672,5 +687,112 @@ C. NIST Special Publications Group for FISMA Cloud Compliance
 D. Cloud Control Matrix - Federal Division
 
 ### Module Summary
+- **GRC:** Governance, risk and compliance functions seek to assign responsibility, manage risk, and ensure the organization is compliant with laws, regulations, and policies.
+- **Cybersecurity roles:** numerous roles are involved in cybersecurity, from the help desk to the CISO. Parties outside of IT may be involved.
+- **Managing risk:** There are four ways to handle risks: accept, mitigate, transfer and avoid. It is best managed with an organized approach, like the Risk Management Framework, or some other organized system.
+- **Framework and Standards:** There exists an array of frameworks and standards to address cybersecurity. Some are flexible and others are designed for strict control
+
+## Module 3: Threats, Attacks and Vulnerability
+
+### Module objectives
+- Define security risks
+- Investigate types of threat actors 
+- Describe key vulnerability and attacks 
+
+> *"For every lock, there is someone out there trying to pick it or break in."*
+>
+> David Bernstein - President at Bernstein Agency
+
+### Examining the Elements of Risk
+
+#### A risk formula
+
+"A measure of the extent to which an entity is threatened by a potential circumstance of event, and typically a function of: (i) the adverse impacts that would arise if the circumstance or event occurs; and (ii) the likelihood of occurrence" - *National Institute of Standards and Technology*
+
+ 
+> [!IMPORTANT]
+> **Vulnerability x Threat x Impact**
+
+- **Vulnerability**: is a specific weakness or some area where a system is at risk of loss of confidentiality, integrity or availability.
+  - e.g.: FTP, buffer overflow, misconfiguration, 
+
+- **Threat**: The real possibility of an attack to compromise, damage, or disrupt a computer network or system.
+  -  
+
+- **Impact**: Replacement cost, income potential lost, or estimated value lost. 
 
 
+#### Identifying vulnerabilities and weakness
+
+##### Common Vulnerabilities and Exposures
+- This is the most common reference method 
+- It provides an ID number and description of the flaw or cause.
+- CVE is very useful for cross-referencing security issues
+- The primary damage of CVE entries is at https://cve.mitre.org
+
+##### Common Weakness Enumeration 
+- This is reference used by CVE
+- It is a collection of identifiers for root causes. 
+  - It does not list any individual or specific vulnerability.
+- It is most useful for noting and identifying problem areas
+- The primary database of CWE entries is at https://cwe.mitre.org
+
+#### CVE entries 
+
+- Publicly known vulnerabilities are assigned as a CVE number
+- Format: CVE-Discovery Year-Serial Number 
+- Information provided: 
+  1. CVE ID
+  2. Description of the problem
+  3. References relating to patching and background information
+
+e.g: CVE-2022-26779
+
+#### CWE entries 
+
+This is reference list for: 
+- Types of security problems
+- Methods of discovering the weaknesses
+- Mitigation and prevention steps 
+
+The inclusion of CWE in reports is helpful for targeting root causes.
+
+e.g. CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)
+
+### Demo Using CVE and CWE
+- CNA: CVE Numbering Authorities
+- CVSS: Common Vulnerability Scoring System
+- CPE
+
+
+### Common Vulnerability Scoring System
+
+#### CVSS
+- The severity of any given vulnerability can be subjective and arbitrary, unless a set of rules can be applied to derive a numeric value.
+- CVSS does this, rating vulnerabilities from 0 - 10.
+- Characteristics information is input to a formula:
+  - None: 0.0
+  - Low: 0.1 - 3.9
+  - Medium: 4.0 - 6.9
+  - High: 7.0 - 8.9
+  - Critical: 9.0 - 10.0
+
+#### CVSS example
+- NIST published a calculator
+- The base inputs are
+  - Location of the attacker
+  - Complexity
+  - Privileges required
+  - User interaction required 
+  - Scope of damage
+  - Effect on CIA
+
+### Lab: Using CVSS to Score a Vulnerability
+
+- CVSS Score https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator
+  - Base score
+  - Temporal score
+  - Environmental score
+
+### N
+- Store XSS, Reflected XSS, DOM-based XSS
